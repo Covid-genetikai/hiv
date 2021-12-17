@@ -1,0 +1,3 @@
+*.seq
+*.seq.gz
+.ipynb_checkpoints/**
