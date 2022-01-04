@@ -1,3 +1,6 @@
+.idea
 *.seq
 *.seq.gz
+*.csv
 .ipynb_checkpoints/**
+.~lock.*
