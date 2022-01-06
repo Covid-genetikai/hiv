@@ -24,6 +24,9 @@ graphviz = "*"
 pydot = "*"
 notebook = "*"
 biopython = "*"
+pandas-profiling = "*"
+ipywidgets = "*"
+tables = "*"
 
 [requires]
 python_version = "3.8"
