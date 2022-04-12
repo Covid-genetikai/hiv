@@ -18,7 +18,7 @@ python3 01-build-dataset.py
 
 # Align 
 ```
-muscle -maxiters 2 -in ../data/1-pol.fasta -clwout ../data/2-pol-aligned.fasta 
+muscle -maxiters 2 -in ../data/1-pol.fasta -out ../data/2-pol-aligned.fasta 
 ```
 
 # Convert fasta to csv
