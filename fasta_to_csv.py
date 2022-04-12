@@ -16,7 +16,7 @@ def main(fasta_filename):
                 if sequence and accession:
                     sequences.append({
                         "accession": accession,
-                        "sgene_nucleotide": "".join(sequence)
+                        "gene": "".join(sequence)
                     })
 
                 parts = line.split(" ")
