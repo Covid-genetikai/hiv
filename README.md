@@ -39,7 +39,7 @@ mafft --amino --thread -1 1-pol.fasta > 2-pol-aligned.fasta
 ### (optional) Align with Muscle5 (not 3.8!)
 ```
 cd ../data
-muscle5 -super5 1-pol.fasta -out 2-pol-aligned.fasta 
+muscle5 -super5 1-pol.fasta -output 2-pol-aligned.fasta 
 ```
 
 ### Convert fasta to csv
