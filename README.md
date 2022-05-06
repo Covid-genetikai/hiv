@@ -39,7 +39,7 @@ mafft --amino --thread -1 1-pol.fasta > 2-pol-aligned.fasta
 ### (optional) Align with Muscle5 (not 3.8!)
 ```
 cd ../data
-muscle5 -super5 1-pol.fasta -output 2-pol-aligned.fasta 
+muscle5 -super5 2-pol.fasta -output 2-pol-aligned.fasta 
 ```
 
 ### Convert fasta to csv
@@ -62,3 +62,16 @@ makeblastdb -in 1-pol.fasta -dbtype prot
 blastp -query query.seq -db 1-pol.fasta -out result.txt -outfmt 6
 ```
 
+
+
+### RAxML
+```
+cd /hiv/tools
+git clone https://github.com/stamatak/standard-RAxML.git
+cd standard-RAxML
+sudo apt install make gcc -y
+make -f Makefile.SSE3.PTHREADS.gcc
+
+./raxmlHPC-PTHREADS-SSE3 -T 8 -f a -x 860647 -p 860647 -N 2 -m PROTGAMMADAYHOFFX -O -n output_file.tre -s /full/path/input.fasta -w /full/path/output/directory
+
+```
