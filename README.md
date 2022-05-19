@@ -90,3 +90,18 @@ python3 -m pip install anytree biopython
 python3 binaryTreeGen_multiproc.py /hiv/mantas/raxml20000/RAxML_bestTree.3-pol-phyl-tree.tre
 
 ```
+
+### Install Graphviz
+```
+sudo apt-get install graphviz 
+```
+
+### Convert tree.dot to tree.json
+```
+dot -Txdot_json -o tree.json tree.dot
+```
+
+### Make pairs
+```
+python3 make_pairs.py /data/hiv/data/pol/tree.json
+```
