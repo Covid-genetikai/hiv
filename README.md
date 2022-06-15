@@ -18,6 +18,14 @@ wget https://mafft.cbrc.jp/alignment/software/mafft_7.490-1_amd64.deb
 sudo dpkg -i mafft_7.490-1_amd64.deb
 ```
 
+### Install Muscle 3.8 (for biopython)
+```
+wget https://drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
+tar xvf muscle3.8.31_i86linux64.tar.gz 
+sudo cp muscle3.8.31_i86linux64 /usr/bin/muscle
+sudo chmod +x /usr/bin/muscle
+```
+
 ### Install Muscle5
 
 ```
