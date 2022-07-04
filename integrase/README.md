@@ -36,13 +36,10 @@ sudo alien -i ncbi-blast-2.11.0+-1.x86_64.rpm
 
 1. Build dataset and do BLAST
 
-Run `1-build-dataset-and-blast.ipynb` notebook
-
-Change `gene_name` variable to `integrase` or `transcriptase`
+Run **1-build-dataset-and-blast.ipynb**
 
 2. Align sequences
 ```
-cd /data/hiv/data/integrase
 muscle5 -super5 2-integrase.fasta -output 3-integrase-aligned.fasta
 ```
 
@@ -54,9 +51,9 @@ cd standard-RAxML
 sudo apt install make gcc -y
 make -f Makefile.SSE3.PTHREADS.gcc
 
-mkdir /data/hiv/data/integrase/raxml
+mkdir /hiv/mantas/raxml
 
-./hiv/tools/standard-RAxML/raxmlHPC-PTHREADS-SSE3 -T 90 -f a -x 860647 -p 860647 -N 2 -m PROTGAMMADAYHOFFX -O -n 4-phyl-tree.tre -s /data/hiv.data/integrase/3-integrase-aligned.fasta -w /data/hiv/data/integrase/raxml
+./hiv/tools/standard-RAxML/raxmlHPC-PTHREADS-SSE3 -T 90 -f a -x 860647 -p 860647 -N 2 -m PROTGAMMADAYHOFFX -O -n 4-phyl-tree.tre -s /hiv/mantas/3-integrase-aligned.fasta -w /hiv/mantas/raxml
 ```
 
 
@@ -65,13 +62,12 @@ mkdir /data/hiv/data/integrase/raxml
 python3 -m pip install anytree biopython
 
 # change input file name (tree name)
-python3 binaryTreeGen_multiproc.py /data/hiv/data/integrase/raxml/RAxML_bestTree.3-pol-phyl-tree.tre
+python3 binaryTreeGen_multiproc.py /hiv/mantas/raxml20000/RAxML_bestTree.3-pol-phyl-tree.tre
 ```
 
 5. Convert tree.dot to tree.json
 ```
 sudo apt-get install graphviz 
-
 dot -Txdot_json -o tree.json tree.dot
 ```
 
