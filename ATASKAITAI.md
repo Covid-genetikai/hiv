@@ -16,7 +16,9 @@ Alignmentas su muscle5 trunka apie 10 minuciu (single core)
 
 **3-genas.csv**
 
-Filogenetinio medzio sudarymas su RAXML uztrunka apie 140 valandu (2dienos 19valandu) (96 core)
+Filogenetinio medzio sudarymas su RAXML uztrunka apie 60 valandu (96 core)
+
+TRANSCRIPTASE ```Overall execution time for full ML analysis: 195008.792553 secs or 54.169109 hours or 2.257046 days```
 
 **raxml/RAxML_bestTree-4-genas.tre**
 
